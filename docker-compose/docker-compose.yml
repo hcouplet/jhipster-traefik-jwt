@@ -1,0 +1,50 @@
+version: '2'
+services:
+    app-app:
+        image: app
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_CLOUD_CONSUL_HOST=consul
+            - SPRING_CLOUD_CONSUL_PORT=8500
+            - SPRING_DATASOURCE_URL=jdbc:mariadb://app-mariadb:3306/app
+            - JHIPSTER_SLEEP=10
+    app-mariadb:
+        image: mariadb:10.1.17
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=app
+        command: mysqld --lower_case_table_names=1 --skip-ssl
+    
+    uaa-app:
+        image: uaa
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_CLOUD_CONSUL_HOST=consul
+            - SPRING_CLOUD_CONSUL_PORT=8500
+            - SPRING_DATASOURCE_URL=jdbc:mariadb://uaa-mariadb:3306/uaa
+            - JHIPSTER_SLEEP=10
+    uaa-mariadb:
+        image: mariadb:10.1.17
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=uaa
+        command: mysqld --lower_case_table_names=1 --skip-ssl
+    
+    consul:
+        extends:
+            file: consul.yml
+            service: consul
+    consul-config-loader:
+        extends:
+            file: consul.yml
+            service: consul-config-loader
+    traefik:
+        extends:
+            file: traefik.yml
+            service: traefik
+    nginx:
+        extends:
+            file: nginx.yml
+            service: nginx

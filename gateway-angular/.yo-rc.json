@@ -1,0 +1,29 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "nativeLanguage": "en",
+      "microservicePath": "../app"
+    },
+    "jhipsterVersion": "4.13.3",
+    "baseName": "gateway-angular",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "yarn",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "databaseType": "none",
+    "devDatabaseType": "none",
+    "prodDatabaseType": "none",
+    "applicationType": "gateway",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "nl",
+      "fr"
+    ],
+    "skipServer": true
+  }
+}

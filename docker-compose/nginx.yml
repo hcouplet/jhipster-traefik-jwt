@@ -1,0 +1,9 @@
+version: '2'
+services:
+  nginx:
+    image: hcouplet/jhipster-nginx-consul
+    volumes:
+    - './nginx/www:/var/www/:rw'
+#    - './nginx/config:/etc/nginx2/:rw'
+    ports:
+    - "80"

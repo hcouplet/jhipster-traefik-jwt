@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.mycompany.uaa",
+      "nativeLanguage": "en",
+      "microservicePath": "../app"
+    },
+    "jhipsterVersion": "4.13.3",
+    "baseName": "uaa",
+    "packageName": "com.mycompany.uaa",
+    "packageFolder": "com/mycompany/uaa",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mariadb",
+    "prodDatabaseType": "mariadb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "consul",
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "5b459203286f3e2316ca664b1770bcb4b591ab57",
+    "enableTranslation": true,
+    "applicationType": "gateway",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "nl",
+      "fr"
+    ],
+    "clientPackageManager": "yarn",
+    "skipClient": true
+  }
+}

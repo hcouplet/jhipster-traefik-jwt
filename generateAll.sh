@@ -16,4 +16,4 @@ cd "$HOME_DIR"/gateway-uaa; ./mvnw verify -Pprod -DskipTests dockerfile:build
 
 cp -R "$HOME_DIR"/gateway-angular.patch/* "$HOME_DIR"/gateway-angular/
 cd "$HOME_DIR"/gateway-angular; yarn run cleanup && yarn run webpack:build:main
-cp -R "$HOME_DIR"/gateway-angular/build/www/* "$HOME_DIR"/docker-compose/nginx/www/
+cp -R "$HOME_DIR"/gateway-angular/build/www/* "$HOME_DIR"/docker-compose/nginx/www/angular1/
